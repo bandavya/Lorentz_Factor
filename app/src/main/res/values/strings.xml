@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Lorentz Factor</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="heading2">TextView</string>
+    <string name="display_output">TextView</string>
+    <string name="calc">CALCULATE</string>
+    <string name="heading">Lorentz Factor Calculator</string>
+    <string name="display_op">The lorentz Factor is:</string>
+    <string name="entervalue">Enter speed of the moving observer:</string>
+    <string name="answer_output">0</string>
+    <string name="spi_factor">SPI FACTOR</string>
+    <string name="heading_spi">SPI FACTOR</string>
+    <string name="display_spi">Button</string>
+    <string name="display_spi_factor">Display Spi Factor</string>
+</resources>
