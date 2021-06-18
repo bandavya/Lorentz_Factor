@@ -2,54 +2,48 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3B3F8"
-    tools:context=".SecondFragment">
+    android:background="#84FFFF"
+    tools:context=".FragmentHome">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/heading_spi"
+        android:id="@+id/heading_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/heading_spi"
-        android:textColor="#673AB7"
+        android:text="@string/home"
+        android:textColor="#FA0505"
         android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/spi_factor"
+        app:layout_constraintBottom_toTopOf="@id/go_to_spi_factor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/spi_factor"
-        android:layout_width="240dp"
-        android:layout_height="88dp"
-        android:gravity="center"
-        android:textColor="#3F51B5"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/display_spi"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/heading_spi" />
-
     <Button
-        android:id="@+id/button_prev"
+        android:id="@+id/go_to_Lorentz_Factor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/previous"
+        android:text="@string/lorentz_factor"
+        app:backgroundTint="#FF9E80"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/display_spi" />
+        app:layout_constraintTop_toBottomOf="@+id/heading_home" />
 
     <Button
-        android:id="@+id/display_spi"
+        android:id="@+id/go_to_spi_factor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/display_spi_factor"
-        app:layout_constraintBottom_toTopOf="@id/button_prev"
+        android:text="@string/go_to_spi_factor"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#8C2121"
+        app:backgroundTint="#FFD180"
+        app:layout_constraintBottom_toTopOf="@+id/go_to_Lorentz_Factor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spi_factor" />
+        app:layout_constraintTop_toBottomOf="@+id/heading_home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

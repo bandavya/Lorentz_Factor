@@ -20,4 +20,24 @@
     <string name="heading_spi">SPI FACTOR</string>
     <string name="display_spi">Button</string>
     <string name="display_spi_factor">Display Spi Factor</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorentz_factor">Lorentz Factor</string>
+    <string name="go_to_home">go_to _home</string>
+    <string name="back_to_home">back_to_home</string>
+    <string name="back_to_lf">"Back "</string>
+    <string name="back_TO_LF">BACK</string>
+    <string name="home">HOME</string>
+    <string name="go_to_spi_factor">SPI FACTOR</string>
+    <string name="predictions">Predictions</string>
+    <string name="heading_pred">Heading to be entered</string>
+    <string name="lorentz_factor_pred">Lorentz Factor</string>
+    <string name="velocity_pred">Speeds of the moving observer</string>
+    <string name="table_heading">Table Heading</string>
+    <string name="textview_lf">Enter Lorentz Factor</string>
+    <string name="textview_vel">Enter Velocity</string>
+    <string name="enter_speed">Enter Speed of the moving observer</string>
+    <string name="enter_speed_of_observer">Enter speed of observer</string>
+    <string name="save">SAVE</string>
+    <string name="home_LF">HOME</string>
 </resources>

@@ -1,12 +1,12 @@
 package com.example.lorentzfactor;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -32,9 +32,21 @@ public class FirstFragment extends Fragment {
 
     public boolean getNumbers() {
         //vel =(EditText ) findViewById(R.id.lorentz_input);
-        s = vel.getText().toString();
+
+        try {
+            v = Integer.parseInt(vel.getText().toString());
+        }catch(NumberFormatException ex){
+            Toast.makeText(getActivity(), "Invalid integer ", Toast.LENGTH_SHORT).show();
+            String result = "Nitin, Please study properly otherwise enter an appropriate value  - Bandavya";
+            lf.setText(result);
+
+            return false;
+            //request for well-formatted string
+        }
+
+        /*
         //lf = (TextView) view.findViewById(R.id.answer_output);
-        if (s.equals(null)) {
+        if (v.equals(null)) {
 
             String result = "Please enter a value";
             lf.setText(result);
@@ -46,7 +58,7 @@ public class FirstFragment extends Fragment {
             v = Integer.parseInt(vel.getText().toString());
 
         }
-
+        */
         return true;
     }
 
@@ -66,11 +78,12 @@ public class FirstFragment extends Fragment {
 
         vel =(EditText ) view.findViewById(R.id.lorentz_input);
         lf = (TextView) view.findViewById(R.id.answer_output);
-        view.findViewById(R.id.spi_value).setOnClickListener(new View.OnClickListener() {
+
+        view.findViewById(R.id.predictions).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                        .navigate(R.id.action_FirstFragment_to_thirdFragment);
             }
         });
         view.findViewById(R.id.calc).setOnClickListener(new View.OnClickListener() {
@@ -79,5 +92,14 @@ public class FirstFragment extends Fragment {
                 lorentz(view);
             }
         });
+        view.findViewById(R.id.go_to_home).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_fragment_home);
+            }
+        });
+
+
     }
 }

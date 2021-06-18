@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C8E6F4"
     tools:context=".FirstFragment">
 
     <TextView
@@ -26,6 +27,7 @@
         android:layout_height="wrap_content"
         android:text="@string/entervalue"
         android:textColor="#2196F3"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/lorentz_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,13 +37,14 @@
         android:id="@+id/lorentz_input"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints="0"
         android:ems="10"
         android:inputType="number"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/Display_output"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/heading2"
-        android:autofillHints="0" />
+        app:layout_constraintTop_toBottomOf="@id/heading2" />
 
     <TextView
         android:id="@+id/Display_output"
@@ -49,6 +52,7 @@
         android:layout_height="wrap_content"
         android:text="@string/display_op"
         android:textColor="#03A9F4"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/answer_output"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,10 +60,12 @@
 
     <TextView
         android:id="@+id/answer_output"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="43dp"
+        android:layout_height="48dp"
+        android:gravity="center"
         android:text="@string/answer_output"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/calc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Display_output" />
@@ -70,19 +76,29 @@
         android:layout_height="wrap_content"
 
         android:text="@string/calc"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spi_value"
+        app:layout_constraintBottom_toTopOf="@id/predictions"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answer_output" />
 
     <Button
-        android:id="@+id/spi_value"
+        android:id="@+id/predictions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/spi_factor"
+        android:text="@string/predictions"
+        app:layout_constraintBottom_toTopOf="@+id/go_to_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc" />
+
+    <Button
+        android:id="@+id/go_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/calc"
-        app:layout_constraintTop_toBottomOf="@+id/answer_output" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/predictions" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
